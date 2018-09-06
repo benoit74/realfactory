@@ -1,0 +1,2 @@
+HEADERS = {'Private-Token': 'mysecrettoken'}
+
