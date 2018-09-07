@@ -27,9 +27,13 @@ The application is composed of :
 - *gitlab.py*: a kind a state machine, responsible of finding the last running pipeline, the jobs, and call for physical actions (smoke and sounds)
 - *raspberry.py*: the real implementation of physical actions, including cleanup at application exit.
 - *main.py*: the real application, looping forever until SIGINT or SIGKILL are received (launches the cleanup).
-- *secret.py*: a small file containing the secret to connect to Gitlab API
 
 Most of the code  (**all business logic code indeed**) is unit-tested in *test_main.py*.
+
+## Environment variables
+
+- GITLAB_TOKEN : access token to connect to Gitlab API to retrieve pipelines and jobs from Gitlab
+- PROJECT_ID : Gitlab project ID (visible in the project details page for instance)
 
 ## Resin.io
 

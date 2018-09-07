@@ -4,7 +4,7 @@ from secret import *
 from functools import reduce
 import os
 
-PROJECT_ID = '5885481'
+PROJECT_ID = os.environ['PROJECT_ID']
 BASE_URL = 'https://gitlab.com/api/v4'
 GET_PROJECT = BASE_URL + '/projects/' + PROJECT_ID
 GET_PIPELINES = BASE_URL + '/projects/' + PROJECT_ID + '/pipelines'
