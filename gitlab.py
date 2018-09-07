@@ -1,6 +1,5 @@
 from raspberry import Raspberry             
 import requests
-from secret import *
 from functools import reduce
 import os
 
