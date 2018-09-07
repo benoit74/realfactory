@@ -2,6 +2,7 @@ from raspberry import Raspberry
 import requests
 from secret import *
 from functools import reduce
+import os
 
 PROJECT_ID = '5885481'
 BASE_URL = 'https://gitlab.com/api/v4'
@@ -12,6 +13,8 @@ UNIT_TEST_JOBS_COUNT = 3
 BUILD_JOBS_COUNT = 1
 DOCKER_PACKAGE_JOBS_COUNT = 3
 DEPLOY_JOBS_COUNT = 1
+
+HEADERS = {'Private-Token': os.environ['GITLAB_TOKEN']}
 
 class Gitlab:
 
