@@ -2,16 +2,16 @@
 [schema_hardware]: https://www.oviles.info/ci_hardware.png "Hardware schematic"
 [resin.io]: https://resin.io/ "Resin.io website"
 
-# Code for physical CI/CD
+# A real software factory
 ![Photo of the real CI][photo_udd]
 
-This folder contain a Python 'application' to bring to life a real CI/CD.
+This folder contain a Python 'application' to bring to life a real CI/CD model.
 
 This code is meant to be run on the RaspberryPi inside the prototype on the picture above.
 
-It is configured to track the stack of the Gitlab cff_poc pipelines and react to events on this pipeline.
+It is configured to track the stack of a Gitlab project pipelines and react to events on this pipeline.
 
-This application is deployed on the Pi through Resin.io
+This application is meant to be deployed on the Pi through Resin.io
 
 ## Application
 
@@ -24,6 +24,7 @@ Most of the code  (**all business logic code indeed**) is unit-tested in *test_m
 
 ## Environment variables
 
+Some environment variables are mandatory for the code to execute:
 - GITLAB_TOKEN : access token to connect to Gitlab API to retrieve pipelines and jobs from Gitlab
 - PROJECT_ID : Gitlab project ID (visible in the project details page for instance)
 
